@@ -3,6 +3,13 @@ package com.sydoruk1ua;
 import com.sydoruk1ua.entity.Item;
 import com.sydoruk1ua.entity.Order;
 import com.sydoruk1ua.entity.User;
+import com.sydoruk1ua.repository.ItemRepository;
+import com.sydoruk1ua.repository.OrderRepository;
+import com.sydoruk1ua.repository.UserRepository;
+import com.sydoruk1ua.service.ItemService;
+import com.sydoruk1ua.service.OrderService;
+import com.sydoruk1ua.service.UserService;
+import com.sydoruk1ua.ui.ConsoleUi;
 
 public class ConsoleApplication {
     public static final int MAX_NUMBER = 5;
@@ -26,6 +33,18 @@ public class ConsoleApplication {
         users[4] = new User(4L, "ian@gmail.com", "5555");
 
         Order[] orders = new Order[ORDER_NUMBER];
-        orders[0] = new Order(1L, null, null);
+        //Orders should be added
+        //orders[0] = new Order(1L, null, null);
+
+        ItemRepository itemRepository = new ItemRepository(items);
+        OrderRepository orderRepository = new OrderRepository(orders);
+        UserRepository userRepository = new UserRepository(users);
+
+        UserService userService = new UserService(userRepository);
+        OrderService orderService = new OrderService(orderRepository);
+        ItemService itemService = new ItemService(itemRepository);
+
+        ConsoleUi consoleUi = new ConsoleUi(userService);
+        consoleUi.run();
     }
 }

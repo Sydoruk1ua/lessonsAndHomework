@@ -20,10 +20,7 @@ public class UserService {
 
     public boolean login(String email, String password) {
         User user = userRepository.findByEmail(email);
-        if (user == null) {
-            return false;
-        }
 
-        return user.getPassword().equals(password);
+        return user == null ? false : user.getPassword().equals(password);
     }
 }
