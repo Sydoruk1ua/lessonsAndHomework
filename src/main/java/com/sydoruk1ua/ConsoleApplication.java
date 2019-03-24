@@ -47,5 +47,9 @@ public class ConsoleApplication {
         ConsoleUi consoleUi = new ConsoleUi(userService);
         consoleUi.run();
         System.out.println("test");
+        System.out.println("test");
+        System.out.println("test");
+        System.out.println("test");
+        System.out.println("test");
     }
 }
