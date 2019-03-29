@@ -9,6 +9,9 @@ import com.sydoruk1ua.repository.UserRepository;
 import com.sydoruk1ua.service.ItemService;
 import com.sydoruk1ua.service.OrderService;
 import com.sydoruk1ua.service.UserService;
+import com.sydoruk1ua.service.impl.ItemServiceImpl;
+import com.sydoruk1ua.service.impl.OrderServiceImpl;
+import com.sydoruk1ua.service.impl.UserServiceImpl;
 import com.sydoruk1ua.ui.ConsoleUi;
 
 public class ConsoleApplication {
@@ -40,11 +43,11 @@ public class ConsoleApplication {
         OrderRepository orderRepository = new OrderRepository(orders);
         UserRepository userRepository = new UserRepository(users);
 
-        UserService userService = new UserService(userRepository);
-        OrderService orderService = new OrderService(orderRepository);
-        ItemService itemService = new ItemService(itemRepository);
+        UserService userServiceImpl = new UserServiceImpl(userRepository);
+        OrderService orderService = new OrderServiceImpl(orderRepository);
+        ItemService itemService = new ItemServiceImpl(itemRepository);
 
-        ConsoleUi consoleUi = new ConsoleUi(userService);
+        ConsoleUi consoleUi = new ConsoleUi(userServiceImpl);
         consoleUi.run();
     }
 }

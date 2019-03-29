@@ -8,8 +8,9 @@ import java.util.Scanner;
 public class ConsoleUi {
     private UserService userService;
     private Scanner scanner;
-    public ConsoleUi(UserService userService) {
-        this.userService = userService;
+
+    public ConsoleUi(UserService userServiceImpl) {
+        this.userService = userServiceImpl;
         this.scanner = new Scanner(System.in);
     }
 
@@ -26,5 +27,4 @@ public class ConsoleUi {
 
         System.out.println(user);
     }
-
 }
