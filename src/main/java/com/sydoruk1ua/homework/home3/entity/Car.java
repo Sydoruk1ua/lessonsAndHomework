@@ -9,7 +9,8 @@ public class Car {
     private final Integer price;
     private final String registrationNumber;
 
-    public Car(Long carId, String brand, String model, Integer manufactureYear, String color, Integer price, String registrationNumber) {
+    public Car(Long carId, String brand, String model, Integer manufactureYear,
+               String color, Integer price, String registrationNumber) {
         this.carId = carId;
         this.brand = brand;
         this.model = model;
