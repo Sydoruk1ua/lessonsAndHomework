@@ -41,13 +41,11 @@ public class StarSystemTest {
         assertEquals("In SolarSystem star system there is/are 3 planet/planets\r\n", outContent.toString());
     }
 
-
     @Test
     public void shouldPrintNameofStarInStarSystem() {
         starSystem.printNameofStarInStarSystem();
         assertEquals("The name of star in SolarSystem star system is Sun\r\n", outContent.toString());
     }
-
 
     @Test
     public void shouldAddPlanetToStarSystem() {
