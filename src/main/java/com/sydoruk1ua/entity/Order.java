@@ -1,5 +1,7 @@
 package com.sydoruk1ua.entity;
 
+import com.sydoruk1ua.entity.user.User;
+
 public class Order {
     private final Long orderId;
     private final Item items;

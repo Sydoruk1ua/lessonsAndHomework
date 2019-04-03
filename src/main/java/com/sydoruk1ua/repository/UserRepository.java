@@ -1,11 +1,11 @@
 package com.sydoruk1ua.repository;
 
-import com.sydoruk1ua.entity.User;
+import com.sydoruk1ua.entity.user.User;
 
 public class UserRepository {
     private User[] users;
 
-    public UserRepository(User [] users) {
+    public UserRepository(User[] users) {
         this.users = users;
     }
 

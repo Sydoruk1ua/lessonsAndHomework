@@ -1,6 +1,8 @@
 package com.sydoruk1ua.ui;
 
-import com.sydoruk1ua.entity.User;
+import com.sydoruk1ua.entity.user.Admin;
+import com.sydoruk1ua.entity.user.User;
+import com.sydoruk1ua.entity.user.UserType;
 import com.sydoruk1ua.service.UserService;
 
 import java.util.Scanner;
@@ -24,6 +26,12 @@ public class ConsoleUi {
             isLogin = userService.login(email, password);
         }
         User user = userService.findByEmail(email);
+
+        UserType userType = user.getUserType();
+        if (userType == UserType.ADMIN) {
+            Admin admin = (Admin) user;
+            System.out.println("Hello admin " + admin.getKey());
+        }
 
         System.out.println(user);
     }

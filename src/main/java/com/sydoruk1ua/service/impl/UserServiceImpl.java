@@ -1,6 +1,6 @@
 package com.sydoruk1ua.service.impl;
 
-import com.sydoruk1ua.entity.User;
+import com.sydoruk1ua.entity.user.User;
 import com.sydoruk1ua.repository.UserRepository;
 import com.sydoruk1ua.service.UserService;
 

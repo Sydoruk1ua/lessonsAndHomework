@@ -2,7 +2,8 @@ package com.sydoruk1ua;
 
 import com.sydoruk1ua.entity.Item;
 import com.sydoruk1ua.entity.Order;
-import com.sydoruk1ua.entity.User;
+import com.sydoruk1ua.entity.user.Admin;
+import com.sydoruk1ua.entity.user.User;
 import com.sydoruk1ua.repository.ItemRepository;
 import com.sydoruk1ua.repository.OrderRepository;
 import com.sydoruk1ua.repository.UserRepository;
@@ -33,7 +34,7 @@ public class ConsoleApplication {
         users[1] = new User(2L, "anna@gmail.com", "2222");
         users[2] = new User(3L, "boris@gmail.com", "3333");
         users[3] = new User(5L, "oleg@gmail.com", "4444");
-        users[4] = new User(4L, "ian@gmail.com", "5555");
+        users[4] = new Admin(4L, "a@gmail.com", "5555", "admin key");
 
         Order[] orders = new Order[ORDER_NUMBER];
         //Orders should be added
