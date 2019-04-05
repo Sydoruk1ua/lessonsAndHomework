@@ -7,8 +7,8 @@ import com.sydoruk1ua.service.UserService;
 public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
-    public UserServiceImpl(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public UserServiceImpl(UserRepository userRepositoryImpl) {
+        this.userRepository = userRepositoryImpl;
     }
 
     @Override

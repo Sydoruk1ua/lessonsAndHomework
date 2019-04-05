@@ -7,6 +7,9 @@ import com.sydoruk1ua.entity.user.User;
 import com.sydoruk1ua.repository.ItemRepository;
 import com.sydoruk1ua.repository.OrderRepository;
 import com.sydoruk1ua.repository.UserRepository;
+import com.sydoruk1ua.repository.impl.ItemRepositoryImpl;
+import com.sydoruk1ua.repository.impl.OrderRepositoryImpl;
+import com.sydoruk1ua.repository.impl.UserRepositoryImpl;
 import com.sydoruk1ua.service.ItemService;
 import com.sydoruk1ua.service.OrderService;
 import com.sydoruk1ua.service.UserService;
@@ -40,15 +43,15 @@ public class ConsoleApplication {
         //Orders should be added
         //orders[0] = new Order(1L, null, null);
 
-        ItemRepository itemRepository = new ItemRepository(items);
-        OrderRepository orderRepository = new OrderRepository(orders);
-        UserRepository userRepository = new UserRepository(users);
+        ItemRepository itemRepository = new ItemRepositoryImpl(items);
+        OrderRepository orderRepository = new OrderRepositoryImpl(orders);
+        UserRepository userRepository = new UserRepositoryImpl(users);
 
-        UserService userServiceImpl = new UserServiceImpl(userRepository);
+        UserService userService = new UserServiceImpl(userRepository);
         OrderService orderService = new OrderServiceImpl(orderRepository);
         ItemService itemService = new ItemServiceImpl(itemRepository);
 
-        ConsoleUi consoleUi = new ConsoleUi(userServiceImpl);
+        ConsoleUi consoleUi = new ConsoleUi(userService);
         consoleUi.run();
     }
 }
