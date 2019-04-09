@@ -21,6 +21,11 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
+    public void save(User user) {
+        System.out.println("user was created in db");
+    }
+
+    @Override
     public User findByUserId(Long userId) {
         for (User user : users) {
             if (userId.equals(user.getUserId())) {

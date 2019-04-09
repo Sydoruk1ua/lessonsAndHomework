@@ -8,5 +8,7 @@ public interface UserService {
 
     User findByUserId(Long userId);
 
+    User save(User user);
+
     boolean login(String email, String password);
 }
