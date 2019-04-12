@@ -8,5 +8,8 @@ public class TestA {
     public static void main(String[] args) {
         TestA testA = new TestA();
         String string = testA.method(new String("string"));
+
+        Test a = new Test();
+      //  String string1 = a.<String>method1("dfd");
     }
 }

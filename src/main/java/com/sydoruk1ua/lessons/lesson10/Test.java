@@ -7,6 +7,6 @@ public class Test<K> {
 
     public static void main(String[] args) {
         Test a = new Test();
-      //  String string = a.method1(new String("string")); // todo
+      //  String string = a.method1(new String("string"));
     }
 }
