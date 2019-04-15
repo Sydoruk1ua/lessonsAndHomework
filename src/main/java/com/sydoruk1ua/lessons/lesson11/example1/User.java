@@ -10,6 +10,7 @@ public class User {
     public static UserBuilder builder() {
         return new UserBuilder();
     }
+
     public static class UserBuilder<SELF extends UserBuilder<SELF>> {
         private String name;
 

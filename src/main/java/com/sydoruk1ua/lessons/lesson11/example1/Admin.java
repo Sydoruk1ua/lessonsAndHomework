@@ -18,6 +18,7 @@ public class Admin extends User {
         public Admin build() {
             return new Admin(this);
         }
+
         public AdminBuilder withPassword(int password) {
             this.password = password;
             return self();

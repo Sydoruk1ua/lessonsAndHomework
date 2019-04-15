@@ -22,6 +22,7 @@ public class MyMath {
 
         }
     }
+
     static int divWrapper(int a, int b) {
         try {
             return div(a, b);

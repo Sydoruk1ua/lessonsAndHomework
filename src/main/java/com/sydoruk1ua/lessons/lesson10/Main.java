@@ -19,7 +19,7 @@ public class Main {
 
         ObjectContainer stringObjectContainer = new ObjectContainer("string");
         String stringObjectValue = (String) stringObjectContainer.getA();
-       // Integer stringObjectValueFake = (Integer) stringObjectContainer.getA();
+        // Integer stringObjectValueFake = (Integer) stringObjectContainer.getA();
 
         GenericContainer<Integer> genericContainer = new GenericContainer<>(1);
         Integer a = genericContainer.getA();
@@ -37,6 +37,6 @@ public class Main {
         System.out.println(numberArrayContainer.sum());
 
         System.out.println(numberArrayContainer.isEquals(integerArrayContainer));
-      //  System.out.println(integerArrayContainer.isEquals(numberArrayContainer));
+        //  System.out.println(integerArrayContainer.isEquals(numberArrayContainer));
     }
 }

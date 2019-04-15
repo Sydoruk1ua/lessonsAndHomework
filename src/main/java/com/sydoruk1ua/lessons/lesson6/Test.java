@@ -7,7 +7,7 @@ public class Test {
 
     }
 
-    public static HashMap<String, Integer>  getMinAndMax(int [] array) {
+    public static HashMap<String, Integer> getMinAndMax(int[] array) {
         int min = array[0];
         int max = array[0];
         HashMap<String, Integer> map = new HashMap<>();
@@ -21,7 +21,6 @@ public class Test {
             }
             map.put("min", min);
             map.put("max", max);
-
         }
         return map;
     }

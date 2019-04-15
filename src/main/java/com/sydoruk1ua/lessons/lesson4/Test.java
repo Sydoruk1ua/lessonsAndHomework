@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Test {
     public static void main(String[] args) {
-        int [] arrC = new int[]{49,50,51,52,53,54,55,56,57};
+        int[] arrC = new int[]{49, 50, 51, 52, 53, 54, 55, 56, 57};
         String b = Arrays.toString(arrC);
         System.out.println(b);
         int[] arr = new int[]{1, 2, 3, 4, 5, 6};

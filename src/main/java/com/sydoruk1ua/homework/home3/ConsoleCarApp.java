@@ -27,6 +27,5 @@ public class ConsoleCarApp {
 
         ConsoleCarUi consoleCarUi = new ConsoleCarUi(carService);
         consoleCarUi.run();
-
     }
 }

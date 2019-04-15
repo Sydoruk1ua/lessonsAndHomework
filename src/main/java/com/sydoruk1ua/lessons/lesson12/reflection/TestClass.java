@@ -20,6 +20,7 @@ public class TestClass {
     public void init2() {
         System.out.println("before method2");
     }
+
     @Test
     public void test2() {
         System.out.println("test2");
