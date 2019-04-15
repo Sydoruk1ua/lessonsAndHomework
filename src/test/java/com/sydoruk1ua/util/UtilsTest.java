@@ -21,7 +21,7 @@ public class UtilsTest {
 
     @BeforeClass
     public static void beforeClass() {
-        System.out.println("Before class");
+        System.out.println("BeforeMethod class");
     }
 
     @AfterClass

@@ -8,10 +8,10 @@ public class Test {
     public static void main(String[] args) {
         System.out.println("Yed");
 
-        Integer x = new Integer( 456);
+        Integer x = 456;
         Integer y = x;
         System.out.println(x == y);
-        y++;
+        x++;
         System.out.println();
         System.out.println(x == y);
     }
