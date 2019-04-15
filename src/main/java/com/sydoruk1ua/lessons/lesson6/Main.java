@@ -7,7 +7,7 @@ public class Main {
         for (; c <= 9; c++) {
             System.out.println();
         }*/
-    ClassA a = new ClassB();
+        ClassA a = new ClassB();
         System.out.println(a.x);
      /*   Integer i = new Integer("10");
         if (i.toString() == i.toString()) {
@@ -21,6 +21,7 @@ public class Main {
 class Car {
 
 }
+
 class ClassA {
     int x = 1;
 }

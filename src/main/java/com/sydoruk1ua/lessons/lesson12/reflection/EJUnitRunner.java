@@ -2,6 +2,7 @@ package com.sydoruk1ua.lessons.lesson12.reflection;
 
 import com.sydoruk1ua.lessons.lesson12.reflection.annotation.AfterMethod;
 import com.sydoruk1ua.lessons.lesson12.reflection.annotation.BeforeMethod;
+import com.sydoruk1ua.lessons.lesson12.reflection.annotation.Ignore;
 import com.sydoruk1ua.lessons.lesson12.reflection.annotation.Test;
 
 import java.lang.reflect.Constructor;
@@ -28,6 +29,7 @@ public class EJUnitRunner {
 
         List<Method> testMethods = Arrays.stream(methods)
                 .filter(method -> method.isAnnotationPresent(Test.class))
+                .filter(method -> !method.isAnnotationPresent(Ignore.class))
                 .collect(Collectors.toList());
 
         List<Method> afterMethods = Arrays.stream(methods)
@@ -36,7 +38,7 @@ public class EJUnitRunner {
 
         for (Method testMethod : testMethods) {
             runMethods(instance, beforeMethods);
-            runSingleMethod(instance, testMethod);
+            runTestMethods(instance, testMethod);
             runMethods(instance, afterMethods);
         }
     }
@@ -44,8 +46,29 @@ public class EJUnitRunner {
     private static void runSingleMethod(Object instance, Method method) {
         try {
             method.invoke(instance);
-        } catch (Exception e) {
+        } catch (Throwable e) {
             e.printStackTrace();
+        }
+    }
+
+    private static void runTestMethods(Object instance, Method method) {
+        try {
+            method.invoke(instance);
+        } catch (Throwable e) {
+            Class<? extends Throwable> expectedException = method.getAnnotation(Test.class).expected();
+            String expectedMessage = method.getAnnotation(Test.class).message();
+            String actualMessage = e.getCause().getMessage() == null ? "" : e.getCause().getMessage();
+
+            if (expectedException.equals(e.getCause().getClass())
+                    && actualMessage.equals(expectedMessage)) {
+                System.out.println("Test passed.");
+            } else {
+                System.err.printf("Test failed. Method %s \nthrows %s message `%s` " +
+                                "\nexpected %s exception message expected `%s`\n", method.getName(),
+                        e.getCause().getClass().getName(), actualMessage, expectedException.getName(),
+                        expectedMessage);
+                e.printStackTrace();
+            }
         }
     }
 

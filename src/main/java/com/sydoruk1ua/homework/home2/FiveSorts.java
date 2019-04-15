@@ -8,7 +8,7 @@ public class FiveSorts {
     public static void main(String[] args) {
         int[] array = new int[1_000_000];
         fillArray(array);
-        int [] tempArray = Arrays.copyOf(array, array.length);
+        int[] tempArray = Arrays.copyOf(array, array.length);
         /**Bubble sort*/
         Instant start = Instant.now();
         doBubbleSort(array);
@@ -16,28 +16,28 @@ public class FiveSorts {
         Duration interval = Duration.between(start, end);
         System.out.println("Buble sort time: " + interval.getNano());
         /**Selection sort*/
-        System.arraycopy(tempArray,0,array,0,array.length);
+        System.arraycopy(tempArray, 0, array, 0, array.length);
         start = Instant.now();
         doSelectionSort(array);
         end = Instant.now();
         interval = Duration.between(start, end);
         System.out.println("Selection sort time: " + interval.getNano());
         /**Insertion sort*/
-        System.arraycopy(tempArray,0,array,0,array.length);
+        System.arraycopy(tempArray, 0, array, 0, array.length);
         start = Instant.now();
         doInsertionSort(array);
         end = Instant.now();
         interval = Duration.between(start, end);
         System.out.println("Insertion sort time: " + interval.getNano());
         /**Merge sort*/
-        System.arraycopy(tempArray,0,array,0,array.length);
+        System.arraycopy(tempArray, 0, array, 0, array.length);
         start = Instant.now();
         doMergeSort(array, array.length);
         end = Instant.now();
         interval = Duration.between(start, end);
         System.out.println("Merge sort time: " + interval.getNano());
         /**Quick sort*/
-        System.arraycopy(tempArray,0,array,0,array.length);
+        System.arraycopy(tempArray, 0, array, 0, array.length);
         start = Instant.now();
         doQuickSort(array, 0, array.length - 1);
         end = Instant.now();
@@ -58,7 +58,7 @@ public class FiveSorts {
         }
     }
 
-    public static void doBubbleSort(int array[]) {
+    public static void doBubbleSort(int[] array) {
         int k;
         for (int m = array.length; m >= 0; m--) {
             for (int i = 0; i < array.length - 1; i++) {
@@ -155,7 +155,7 @@ public class FiveSorts {
     /**
      * Additional method for doQuickSort
      */
-    private static int partition(int arr[], int begin, int end) {
+    private static int partition(int[] arr, int begin, int end) {
         int pivot = arr[end];
         int i = (begin - 1);
 

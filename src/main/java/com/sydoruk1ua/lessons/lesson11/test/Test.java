@@ -19,7 +19,6 @@ public class Test {
 
         String str = "19";
         str.concat(".5");
-
     }
 
     public static void var(Integer i, int k) {

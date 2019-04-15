@@ -10,7 +10,7 @@ public class CarService {
         this.carRepository = carRepository;
     }
 
-    public Car[] findCarsByBrand(String brand){
+    public Car[] findCarsByBrand(String brand) {
         return carRepository.findCarsByBrand(brand);
     }
 
@@ -21,5 +21,4 @@ public class CarService {
     public Car[] findCarsByManufactureYearAndPriceMoreThanN(Integer manufactureYear, Integer price) {
         return carRepository.findCarsByManufactureYearAndPriceMoreThanN(manufactureYear, price);
     }
-
 }

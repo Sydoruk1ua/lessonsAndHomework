@@ -29,7 +29,7 @@ public class Main {
         messageMethod.setAccessible(true);
         String invoke = (String) messageMethod.invoke(b, 2);
         System.out.println(invoke);
-     //   System.out.println(messageMethod.invoke(b, 2));
+        //   System.out.println(messageMethod.invoke(b, 2));
     }
 }
 
@@ -44,13 +44,12 @@ class B {
 
     private String message(int n) {
         String result = name + " " + age;
-        StringBuilder resultBuilder =  new StringBuilder();
+        StringBuilder resultBuilder = new StringBuilder();
         //result.append(name).append(" ").append(age);
 
         for (int i = 0; i < n; i++) {
 //            result.append(" ").append(name).append(" ").append(age);
             resultBuilder.append(result);
-
         }
         return resultBuilder.toString();
     }
