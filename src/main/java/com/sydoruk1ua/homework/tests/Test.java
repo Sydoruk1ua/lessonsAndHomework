@@ -12,7 +12,18 @@ public class Test {
         System.out.println(x == y);
     }
 
+    public int method() {
+        return 0;
+    }
+
     private static class Test2 {
         private static final String name = "Name";
+    }
+}
+
+class A1 extends Test {
+    @Override
+    public int method() {
+        return 0;
     }
 }
