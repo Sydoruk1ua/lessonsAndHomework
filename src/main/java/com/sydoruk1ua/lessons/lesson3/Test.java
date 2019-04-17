@@ -6,9 +6,8 @@ public class Test {
         System.out.println(Byte.class);
     }
 
-    float[][] f1;
-    float[] f2;
-    String[][] names;
+    float[] f1[], f2;
+    String[] names[];
     int[][] scores = {{1, 2}, {1, 2, 3, 4}, {1, 2, 3}, {2, 4}, {4, 5}};
 
     public static void main(String[] args) {
