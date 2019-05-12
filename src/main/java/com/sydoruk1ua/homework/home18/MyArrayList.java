@@ -1,6 +1,4 @@
-package com.sydoruk1ua.lessons.lesson18.list;
-
-import java.util.Arrays;
+package com.sydoruk1ua.homework.home18;
 
 public class MyArrayList<T> implements MyList<T> {
     private static final int DEFAULT_CAPACITY = 10;
@@ -22,21 +20,14 @@ public class MyArrayList<T> implements MyList<T> {
         if (array.length == size) {
             increaseArray();
         }
-        System.out.println("test");
         array[size] = item;
-        System.out.println("after");
         size++;
     }
 
     private void increaseArray() {
-      /*  Object[] objects = new Object[size * 3 / 2];
+        Object[] objects = new Object[size * 3 / 2];
         System.arraycopy(array, 0, objects, 0, size);
-        this.array = objects;*/
-
-        int oldCapacity = array.length;
-        int newCapacity = oldCapacity + (oldCapacity >> 1);
-        // minCapacity is usually close to size, so this is a win:
-        array = Arrays.copyOf(array, newCapacity);
+        this.array = objects;
     }
 
     @Override
@@ -46,7 +37,7 @@ public class MyArrayList<T> implements MyList<T> {
     }
 
     private void validateIndex(int index) {
-        if (index >= 0 && index < size) {
+        if (!(index >= 0 && index < size)) {
             throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
         }
     }
@@ -61,11 +52,11 @@ public class MyArrayList<T> implements MyList<T> {
 
         T oldValue = get(index);
 
- /*       int numMoved = size - index - 1;
+        int numMoved = size - index - 1;
         if (numMoved > 0)
-            System.arraycopy(array, index+1, array, index,
+            System.arraycopy(array, index + 1, array, index,
                     numMoved);
-        array[--size] = null;*/
+        array[--size] = null;
 
         return oldValue;
     }

@@ -1,7 +1,5 @@
 package com.sydoruk1ua.lessons.lesson18.list;
 
-import java.util.LinkedList;
-
 public class MyLinkedList<T> implements MyList<T> {
     Node<T> first;
     Node<T> last;
@@ -14,14 +12,14 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public void add(T item) {
-        final Node<T> l = last;
+    /*    final Node<T> l = last;
         final Node<T> newNode = new Node<>(l, item, null);
         last = newNode;
         if (l == null)
             first = newNode;
         else
             l.next = newNode;
-        size++;
+        size++;*/
     }
 
     @Override
@@ -36,7 +34,7 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public void clear() {
-        for (Node<T> x = first; x != null; ) {
+      /*  for (Node<T> x = first; x != null; ) {
             Node<T> next = x.next;
             x.item = null;
             x.next = null;
@@ -44,7 +42,7 @@ public class MyLinkedList<T> implements MyList<T> {
             x = next;
         }
         first = last = null;
-        size = 0;
+        size = 0;*/
     }
 
     private void validateIndex(int index) {

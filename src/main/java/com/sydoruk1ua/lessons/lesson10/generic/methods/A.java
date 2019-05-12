@@ -23,9 +23,6 @@ public class A {
         return null;
     }
 
-    public <S> S method1(S k) {
-        return null;
-    }
 
   /*  public <T extends Number, E> T method(T o, E e, int a, K k) {
         System.out.println(o);
