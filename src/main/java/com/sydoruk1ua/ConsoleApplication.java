@@ -7,9 +7,9 @@ import com.sydoruk1ua.entity.user.User;
 import com.sydoruk1ua.repository.ItemRepository;
 import com.sydoruk1ua.repository.OrderRepository;
 import com.sydoruk1ua.repository.UserRepository;
-import com.sydoruk1ua.repository.impl.ItemRepositoryImpl;
-import com.sydoruk1ua.repository.impl.OrderRepositoryImpl;
-import com.sydoruk1ua.repository.impl.UserRepositoryImpl;
+import com.sydoruk1ua.repository.impl.arr.ItemRepositoryImpl;
+import com.sydoruk1ua.repository.impl.arr.OrderRepositoryImpl;
+import com.sydoruk1ua.repository.impl.arr.UserRepositoryImpl;
 import com.sydoruk1ua.service.ItemService;
 import com.sydoruk1ua.service.OrderService;
 import com.sydoruk1ua.service.UserService;
@@ -36,7 +36,7 @@ public class ConsoleApplication {
         users[0] = new User(1L, "alex@gmail.com", "1111");
         users[1] = new User(2L, "anna@gmail.com", "2222");
         users[2] = new User(3L, "boris@gmail.com", "3333");
-        users[3] = new User(5L, "oleg@gmail.com", "4444");
+        users[3] = new User(5L, "olegpetr@gmail.com", "4444");
         users[4] = new Admin(4L, "a@gmail.com", "5555", "admin key");
 
         Order[] orders = new Order[ORDER_NUMBER];

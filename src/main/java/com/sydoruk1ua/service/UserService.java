@@ -11,4 +11,6 @@ public interface UserService {
     User save(User user);
 
     boolean login(String email, String password);
+
+    User create(User user);
 }

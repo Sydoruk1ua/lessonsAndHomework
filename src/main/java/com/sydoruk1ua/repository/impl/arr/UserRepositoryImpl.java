@@ -1,4 +1,4 @@
-package com.sydoruk1ua.repository.impl;
+package com.sydoruk1ua.repository.impl.arr;
 
 import com.sydoruk1ua.entity.user.User;
 import com.sydoruk1ua.repository.UserRepository;

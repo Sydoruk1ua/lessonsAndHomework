@@ -5,25 +5,34 @@ import com.sydoruk1ua.entity.user.User;
 import com.sydoruk1ua.entity.user.UserType;
 import com.sydoruk1ua.service.UserService;
 
+import java.util.ResourceBundle;
 import java.util.Scanner;
 
 public class ConsoleUi {
+    private ResourceBundle resourceBundle;
     private UserService userService;
     private Scanner scanner;
 
     public ConsoleUi(UserService userServiceImpl) {
         this.userService = userServiceImpl;
         this.scanner = new Scanner(System.in);
+        this.resourceBundle = ResourceBundle.getBundle("message_ru_Ru");
     }
 
     public void run() {
+
         boolean isLogin = false;
         String email = null;
         while (!isLogin) {
-            System.out.println("Plase input your email and password");
+            System.out.println("1-Login/2-Create account");
+            int choose = scanner.nextInt();
+            System.out.println(resourceBundle.getString("input.email"));
             email = scanner.next();
+            System.out.println("Input password");
             String password = scanner.next();
-            isLogin = userService.login(email, password);
+
+            isLogin = choose == 1 ? userService.login(email, password)
+                    : userService.create(new User(100L, email, password)) != null;
         }
         User user = userService.findByEmail(email);
 

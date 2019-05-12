@@ -1,4 +1,4 @@
-package com.sydoruk1ua.repository.impl;
+package com.sydoruk1ua.repository.impl.list;
 
 import com.sydoruk1ua.entity.Item;
 import com.sydoruk1ua.repository.ItemRepository;
