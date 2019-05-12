@@ -10,7 +10,7 @@ public class Student {
 
     public Student(Long id, String name, String surname, LocalDate date) {
         this.id = id;
-        this.name = name;
+        Student.name = name;
         this.surname = surname;
         this.date = date;
     }
