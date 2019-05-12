@@ -16,7 +16,11 @@ public class A {
 
     public static void main(String[] args) {
         A a = new A();
-        String string = a.<String>method1("String"); // todo
+        String string = a.method1("String"); // todo
+    }
+
+    public <S> S method1(S k) {
+        return null;
     }
 
     public <S> S method1(S k) {

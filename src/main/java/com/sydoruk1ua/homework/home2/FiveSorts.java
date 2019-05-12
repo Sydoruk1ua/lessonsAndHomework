@@ -58,7 +58,7 @@ public class FiveSorts {
         }
     }
 
-    public static void doBubbleSort(int array[]) {
+    public static void doBubbleSort(int[] array) {
         int k;
         for (int m = array.length; m >= 0; m--) {
             for (int i = 0; i < array.length - 1; i++) {
@@ -155,7 +155,7 @@ public class FiveSorts {
     /**
      * Additional method for doQuickSort
      */
-    private static int partition(int arr[], int begin, int end) {
+    private static int partition(int[] arr, int begin, int end) {
         int pivot = arr[end];
         int i = (begin - 1);
 
