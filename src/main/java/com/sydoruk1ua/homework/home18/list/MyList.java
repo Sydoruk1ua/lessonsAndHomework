@@ -1,4 +1,4 @@
-package com.sydoruk1ua.homework.home18;
+package com.sydoruk1ua.homework.home18.list;
 
 /**
  * @param <T>

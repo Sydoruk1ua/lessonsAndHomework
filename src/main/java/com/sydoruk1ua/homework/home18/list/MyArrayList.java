@@ -1,4 +1,4 @@
-package com.sydoruk1ua.homework.home18;
+package com.sydoruk1ua.homework.home18.list;
 
 public class MyArrayList<T> implements MyList<T> {
     private static final int DEFAULT_CAPACITY = 10;
