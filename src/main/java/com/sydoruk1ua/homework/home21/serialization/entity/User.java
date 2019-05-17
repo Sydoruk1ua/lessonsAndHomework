@@ -10,6 +10,7 @@ public class User implements Serializable {
     private Sex sex;
     private Address address;
     private LocalDate birthday;
+    //todo add serial version
 
     public User(String name, String surname, Sex sex, Address address, LocalDate birthday) {
         this.name = name;

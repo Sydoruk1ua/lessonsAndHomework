@@ -9,7 +9,7 @@ public class FileReverser {
 
     public void reverseFileWriterByList(String initialFile, String reversedFile) throws IOException {
         List<Integer> fileData = new ArrayList<>();
-        try (Reader reader = new InputStreamReader(new FileInputStream(initialFile))) {
+        try (Reader reader = new InputStreamReader(new FileInputStream(new File(initialFile)))) {
             while (reader.read() != -1) {
                 int read = reader.read();
                 fileData.add(read);
@@ -18,7 +18,8 @@ public class FileReverser {
         }
 
         if (!fileData.isEmpty()) {
-            try (Writer writer = new OutputStreamWriter(new FileOutputStream(reversedFile), StandardCharsets.UTF_8)) {
+            try (Writer writer = new OutputStreamWriter(new FileOutputStream(new File(reversedFile)),
+                    StandardCharsets.UTF_8)) {
                 for (int i = fileData.size() - 1; i >= 0; i--) {
                     writer.write(fileData.get(i));
                 }
@@ -29,7 +30,7 @@ public class FileReverser {
     public void reverseFileWriterByRAF(String initialFile, String reversedFile) throws IOException {
         File file = new File(initialFile);
         try (RandomAccessFile randomAccessFile = new RandomAccessFile(file, "r");
-             BufferedOutputStream writer = new BufferedOutputStream(new FileOutputStream(reversedFile))) {
+             BufferedOutputStream writer = new BufferedOutputStream(new FileOutputStream(new File(reversedFile)))) {
             long fileLength = file.length() - 1;
             randomAccessFile.seek(fileLength);
             for (long pointer = fileLength; pointer >= 0; pointer--) {
@@ -40,8 +41,8 @@ public class FileReverser {
     }
 
     public void reverseFileWriterByArray(String initialFile, String reversedFile) throws IOException {
-        try (FileInputStream fileInputStream = new FileInputStream(initialFile);
-             FileOutputStream fileOutputStream = new FileOutputStream(reversedFile)) {
+        try (FileInputStream fileInputStream = new FileInputStream(new File(initialFile));
+             FileOutputStream fileOutputStream = new FileOutputStream(new File(reversedFile))) {
             int[] allBytesFromFile1 = new int[fileInputStream.available()];
             for (int i = 0; i < allBytesFromFile1.length; i++) {
                 allBytesFromFile1[i] = fileInputStream.read();

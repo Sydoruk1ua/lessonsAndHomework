@@ -52,6 +52,7 @@ public class XmlParser {
         } else if (string.contains("scope")) {
             scope = getScope(getValue(string));
         }
+        //todo: read 14 add anotations. Add framework
     }
 
     public String getValue(String str) {
