@@ -1,4 +1,4 @@
-package com.sydoruk1ua.homework.home21.xml;
+package com.sydoruk1ua.homework.home21.xml.regex;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -52,7 +52,7 @@ public class XmlParser {
         } else if (string.contains("scope")) {
             scope = getScope(getValue(string));
         }
-        //todo: read 14 add anotations. Add framework
+        //todo: read 14 add annotations. Add framework
     }
 
     public String getValue(String str) {

@@ -1,4 +1,4 @@
-package com.sydoruk1ua.homework.home21.xml;
+package com.sydoruk1ua.homework.home21.xml.regex;
 
 public class Dependency {
     private String groupId;

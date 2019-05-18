@@ -5,12 +5,13 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class User implements Serializable {
+    //todo add serial version
+    private static final long serialVersionUID = 1L;
     private String name;
     private String surname;
     private Sex sex;
     private Address address;
     private LocalDate birthday;
-    //todo add serial version
 
     public User(String name, String surname, Sex sex, Address address, LocalDate birthday) {
         this.name = name;

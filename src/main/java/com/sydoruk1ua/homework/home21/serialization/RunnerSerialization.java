@@ -9,8 +9,7 @@ import java.time.LocalDate;
 import java.time.Month;
 
 public class RunnerSerialization {
-    private static final String FILE_NAME = "F:\\EPAM\\projects\\study-project\\src\\main\\" +
-            "resources\\home21\\serialization\\fileSD.txt";
+    private static final String FILE_NAME = "./src/main/resources/home21/serialization/fileSD.txt";
 
     public static void main(String[] args) {
         User userSer = new User("Alex", "Surname", Sex.MALE, new Address("Kiev", 25),

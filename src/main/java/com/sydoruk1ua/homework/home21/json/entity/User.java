@@ -14,11 +14,11 @@ public class User {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("User{");
-        sb.append("name='").append(name).append('\'');
-        sb.append(", surname='").append(surname).append('\'');
-        sb.append(", phones=").append(Arrays.toString(phones));
-        sb.append(", sites=").append(sites);
-        sb.append(", address=").append(address);
+        sb.append("name:'").append(name).append('\'');
+        sb.append(", surname:'").append(surname).append('\'');
+        sb.append(", phones:").append(Arrays.toString(phones));
+        sb.append(", sites:").append(sites);
+        sb.append(", address:").append(address);
         sb.append('}');
         return sb.toString();
     }

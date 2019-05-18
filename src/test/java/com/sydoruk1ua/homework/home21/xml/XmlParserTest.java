@@ -1,5 +1,7 @@
 package com.sydoruk1ua.homework.home21.xml;
 
+import com.sydoruk1ua.homework.home21.xml.regex.Scope;
+import com.sydoruk1ua.homework.home21.xml.regex.XmlParser;
 import org.junit.Before;
 import org.junit.Test;
 
